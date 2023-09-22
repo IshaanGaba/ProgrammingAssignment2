@@ -6,13 +6,13 @@
 ##library(MASS) is used to calculate inverse.
 library(MASS)
 makeCacheMatrix <- function(x = matrix()) {
-  inv<-NULL           
+  i<-NULL           
   set<-function(y){
     x<<-y
-    inv<<-NULL
+    i<<-NULL
   }
   get<-function()x             #function to get matrix x
-  setinv<-function(inverse)inv<-inverse
+  setinv<-function(inverse)i<-inverse
   getinv<-function(){ 
     inver<-ginv(x)
     inver%*%x           #function to obtain inverse of the matrix
